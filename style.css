@@ -1,3 +1,18 @@
+.game_div {
+  /* position: relative;
+  top: 20vh;
+  left: 45vw; */
+  /* height: 20vh; */
+  /* width: 100vw; */
+  margin: auto;
+  width: 50%;
+  height: 50vh;
+  text-align: center;
+}
+
 #start_game_btn {
-  background-color: blue;
+  background-color: rgb(52, 81, 247);
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: bold;
 }

@@ -1,4 +1,5 @@
 const startGame = document.getElementById('start_game_btn');
+const gameStats = document.getElementById('game_stats');
 
 const ROCK = 'ROCK';
 const PAPER = 'PAPER';
@@ -54,5 +55,17 @@ startGame.addEventListener('click', function () {
   const playerSelection = start();
   const computerSelection = computerChoice();
   const winner = determineWinner(computerSelection, playerSelection);
-  alert(winner);
+  let message = `You chose ${playerSelection} and the computer chose ${computerSelection}, therefore `;
+  if (winner === 'draw') {
+    message = message + "it's a draw!";
+  } else if (winner === 'layer wins') {
+    message = message + 'You Win!';
+  } else {
+    message = message + 'Computer Wins!';
+  }
+  gameStats.innerHTML = `<h2> ${message}</h2> <h2>Stats:\n 
+  Wins: ${wins} 
+  Losses: ${losses} 
+  Ties: ${ties} </h2>`;
+  //   alert(message);
 });
